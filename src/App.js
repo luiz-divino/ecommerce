@@ -1,10 +1,10 @@
-import { useProducts } from "./services/useProducts";
+import { Card } from "./components/Card/Card";
 
 function App() {
-  const { products } = useProducts();
   return (
     <div>
       <h1> E-commerce App</h1>
+      <Card />
     </div>
   );
 }
