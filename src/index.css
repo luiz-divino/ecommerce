@@ -2,4 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./components/Card/Card.scss";
+@import "./styles/_variables.scss";
+@import "./components/Navbar/Navbar.scss";
