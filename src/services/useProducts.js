@@ -2,9 +2,10 @@ import { useState, useEffect } from "react";
 
 export function useProducts() {
     const [products, setProducts] = useState([]);
+    const [loarding, setLoading] = useState(false);
 
     useEffect(() => {
-        let Api = "https://fakestoreapi.com/products";
+        let Api = "https://fakestoreapi.com/products/";
         async function fetchProducts() {
             try {
                 await fetch(Api)
@@ -18,7 +19,9 @@ export function useProducts() {
             }
         }
         fetchProducts();
-    }, [])
-    return { products };
-       
+    }, []);
+
+ 
+    return { products, loarding  };
+
 }
