@@ -1,0 +1,15 @@
+@use "../../styles/variables" as *;
+
+nav {
+  background-color: $background-card;
+  display: flex;
+  gap: 20px;
+
+  input {
+    border-radius: 5px;
+    border: none;
+    &:focus {
+      outline: solid 1px black;
+    }
+  }
+}
