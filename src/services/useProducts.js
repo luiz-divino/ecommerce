@@ -1,11 +1,10 @@
-import React from "react";
 import { useState, useEffect } from "react";
 
 export function useProducts() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        let Api = "https://fakestoreapi.com/products/1";
+        let Api = "https://fakestoreapi.com/products";
         async function fetchProducts() {
             try {
                 await fetch(Api)
