@@ -22,6 +22,6 @@ export function useProducts() {
     }, []);
 
  
-    return { products, loarding  };
+    return { products, loarding, setLoading  };
 
 }
