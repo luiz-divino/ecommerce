@@ -1,4 +1,4 @@
-import './Card.scss';
+import './_card.scss';
 export function Card({ filteredProducts }) {
 
     return (

@@ -1,4 +1,4 @@
-import './Navbar.scss';
+import './_navbar.scss';
 import { useState } from 'react';
 
 export function Navbar({ search, setSearch }) {
