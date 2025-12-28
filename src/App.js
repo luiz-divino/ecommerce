@@ -15,8 +15,7 @@ function App() {
   return (
     <div>
       <Navbar search={search} setSearch={setSearch} />
-
-      <main>
+      <main className="grid grid-cols-2">
         {loading ? <p>Carregando...</p> :
           filteredProducts.map((product) => (
             <Card key={product.id} filteredProducts={product} />
