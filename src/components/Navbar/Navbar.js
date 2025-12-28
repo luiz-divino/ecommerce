@@ -6,10 +6,11 @@ export function Navbar({ search, setSearch }) {
     const [active, setActive] = useState(false);
 
 
-    function handleClick() {
+    const handleClick = () => {
         setActive(!active);
         setIcone(active ? 'fa-magnifying-glass' : 'fa-chevron-down');
-    }
+    } 
+    
     return (
         <nav className='p-6'>
 
