@@ -1,7 +1,7 @@
 import './_navbar.scss';
 import { useState } from 'react';
 
-export function Navbar({ search, setSearch }) {
+export function Navbar({ search, setSearch, setIsOpen }) {
     const [icone, setIcone] = useState('fa-magnifying-glass');
     const [active, setActive] = useState(false);
 
@@ -10,6 +10,10 @@ export function Navbar({ search, setSearch }) {
         setActive(!active);
         setIcone(active ? 'fa-magnifying-glass' : 'fa-chevron-down');
     } 
+
+    const openCart = () =>{
+        setIsOpen(true);
+    }
     
     return (
         <nav className='p-6'>
@@ -25,7 +29,7 @@ export function Navbar({ search, setSearch }) {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />
-            <button className='btn-cart'>
+            <button className='btn-cart' onClick={openCart}>
                 <i className={"fa-solid fa-cart-shopping"}></i>
             </button>
         </nav>
