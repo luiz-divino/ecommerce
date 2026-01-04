@@ -5,7 +5,7 @@
   background-color: white;
   font-family: "Arial", sans-serif;
 
-  div {
+  .card-data {
     background-color: $background-card;
     padding: 17px;
     border-radius: 5px;
@@ -25,9 +25,9 @@
         border: 2px solid #37a3a3;
       }
     }
-    span{
+    span {
       text-decoration: line-through;
-      color:$text-color;
+      color: $text-color;
     }
     p {
       font-size: 18px;
@@ -37,15 +37,46 @@
   }
 }
 
-.btn-cart{
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  &:hover {
-    background-color: #2e7f7f;
+.container-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .cart-plus {
+    cursor: pointer;
+    padding: 8px;
+    &:hover {
+      color: black;
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+  }
+  .btn-shop {
+    margin-top: 8px;
+    background-color: #37a3a3;
     color: white;
-    transition: background-color 0.3s ease;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover {
+      background-color: #2e7f7f;
+      transform: scale(1.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+  }
+
+  .btn-cart {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      background-color: #2e7f7f;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
   }
 }
